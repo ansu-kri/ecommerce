@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: azure;
+}
+#nav {
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* position: fixed; */
+    top: 0;
+    margin: auto;
+    width: 100%;
+    height: 70px;
+    /* background-image: url(https://adn-static1.nykaa.com/media/wysiwyg/2022/common-strip-prebuzz.jpg); */
+    background-color: #Fc2779;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#navbar>div>a {
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+}
+
+a {
+    text-decoration: none;
+    color:#fff;
+    font-size: 20px;
+    margin-left: 30px;
+}
+
+a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+.logo {
+    color: rgb(80, 136, 208);
+    font-size: 30px;
+    margin-left: -30px;
+}
+#search{
+    padding: 10px;
+    border: none;
+}
+
+#menu-btn {
+    margin-left: 50px;
+    display: none;
+}
+
+#cart {
+    font-size: 30px;
+    color: rgb(129, 81, 169);
+}
+
+#close>img {
+    width: 20px;
+}
+
+#slider {
+    height: 100vh;
+    width: 0px;
+    /* margin-top: 90px; */
+    background-color: rgb(242, 224, 200);
+    max-width: 600px;
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0px;
+    right: 0px;
+}
+
+#br {
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
+    align-items: stretch;
+    font-size: 50px;
+}
+
+#banner{
+    width: 100%;
+    height: 60px;
+    border: 1px solid red;
+    margin: auto;
+    text-align: center;
+    background-image: url(https://adn-static1.nykaa.com/media/wysiwyg/2022/common-strip-prebuzz.jpg);
+    
+}
+#banner>h1{
+    margin-top: 10px;
+}
+#rhl{
+
+    width: 99%;
+    height: 300px;
+    border: 1px solid black;
+    margin: auto;
+    margin-top: 10px;
+}
+#rhl>img{
+    width: 100%;
+    height: 100%;
+}
+#rhl>button {
+    position: absolute;
+    top: 35%;
+    background-color: rgba(100, 100, 100, 0.1);
+    border: none;
+    font-size: 50px;
+    color: #fff;
+    cursor: pointer;
+}
+#rhl>button:nth-child(2) {
+    left: 20px;
+
+}
+
+#rhl>button:nth-child(3) {
+    right: 20px;
+
+
+}
+
+@media only screen and (max-width:600px) {
+    #menu-btn {
+        /* margin-left: 70px; */
+        display: block;
+    }
+
+    #navbar>div>a {
+        display: none;
+    }
+
+    .logo {
+        margin-left: 48px;
+    }
+    #rhl{
+        display: none;
+    }
+    #container{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
