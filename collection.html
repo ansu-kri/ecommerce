@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="index.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .active-button {
+            background-color: green;
+            color: white;
+
+        }
+
+        /* #sort{
+            padding: 16px;
+        } */
+        table {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+            margin: auto;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        table td,
+        table th {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        img {
+            width: 85px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <select id="sort">
+        <option value="">Sort By Price</option>
+        <option value="High-Low">High To Low</option>
+        <option value="Low-High">Low To High</option>
+    </select>
+    <table>
+        <thead>
+            <tr>
+                <th>Image </th>
+                <th>Name</th>
+                <th>Brand</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <div id="pagination"></div>
+</body>
+<script src="./collection.js"></script>
+
+</html>

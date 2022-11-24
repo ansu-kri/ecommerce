@@ -1,0 +1,129 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        footer {
+            width: 100%;
+            border: 0px solid red;
+            height: 400px;
+            background-color: #172337;
+        }
+
+        #wrap {
+            width: 1400px;
+            height: 300px;
+            border: 0px solid black;
+            margin: auto;
+            /* margin-top: 25px; */
+            display: flex;
+        }
+
+        #left {
+            width: 800px;
+            border: 0px solid red;
+            height: 250px;
+            margin: auto;
+            display: flex;
+
+        }
+
+        #left>div>h4 {
+            color: rgb(124, 122, 122);
+            padding: 20px;
+            font-weight: 100;
+            margin-left: 20px;
+        }
+
+        #left>div>a {
+            color: #fff;
+            text-decoration: none;
+            /* padding: 10px; */
+        }
+
+        #left>div>a:hover {
+            text-decoration: underline;
+        }
+
+        #left>div {
+            width: 25%;
+            border: 0px solid green;
+        }
+
+        #right {
+            width: 500px;
+            border: 0px solid red;
+            height: 250px;
+            margin: auto;
+            display: flex;
+            border-left: 1px solid grey;
+        }
+
+        #right>div {
+            width: 50%;
+            border: 0px solid blue;
+        }
+
+        #right>div>h4 {
+            color: rgb(124, 122, 122);
+            padding: 10px;
+            font-weight: 100;
+        }
+
+        #right>div>p {
+            color: #fff;
+            padding: 10px;
+        }
+
+        #footer_last_div {
+            border: 0px solid red;
+            height: 73px;
+            display: flex;
+        }
+
+        #footer_last_div>:nth-child(1) {
+            border: 0px solid black;
+            width: 240px;
+            margin: auto;
+        }
+
+        .footer_img {
+            margin-left: 60px;
+        }
+
+        #footer_last_div>:nth-child(2) {
+            border: 0px solid black;
+            width: 240px;
+            margin: auto;
+        }
+
+        #footer_last_div>:nth-child(3) {
+            border: 0px solid black;
+            width: 240px;
+            margin: auto;
+        }
+
+        #footer_last_div>:nth-child(4) {
+            border: 0px solid black;
+            width: 240px;
+            margin: auto;
+        }
+
+        #footer_last_div>:nth-child(5) {
+            border: 0px solid black;
+            width: 240px;
+            margin: auto;
+        }
+
+        #footer_last_div>:nth-child(6) {
+            border: 0px solid black;
+            width: 400px;
+            margin: auto;
+        }
+
+        .last_part {
+            color: #fff;
+
+        }

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Data</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        img {
+            height: 200 px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="nav">
+        <div>
+            <a href="index.html" class="logo"><i class="fa fa-female"></i>cosmetics</a>
+
+        </div>
+        <div id="navbar">
+            <div>
+                <a href="./index.html">Home</a>
+            </div>
+            <div>
+
+                <a href="./cloth.html">Women</a>
+            </div>
+            <div>
+                <a href="./collection.html">Collection</a>
+            </div>
+            <div>
+                <a href="./cart.html" id="cart" class="fa fa-shopping-cart"></a>
+            </div>
+            <div id="searchbox">
+                <input type="text" id="search" placeholder="Search" />
+            </div>
+            <div id="nav1">
+                <a href="./login.html">LOGIN</a>
+            </div>
+            <div>
+                <a href="./signup.html">SIGNUP</a>
+            </div>
+            <div>
+                <div id="menu-btn" class="fa fa-bars"></div>
+            </div>
+        </div>
+
+</body>
+<script>
+    let DefaultData = {
+
+        brand: "Gap",
+        name: "balck bella",
+        price: "1347",
+        size: "S,M,XX,XXL",
+        productID: "women18",
+        catagory: "formal",
+        img: "https://m.media-amazon.com/images/G/31/img2020/fashion/WA_2020/BAY2022/SBO-QC3_01._SS680_QL85_.jpg",
+
+    }
+
+    let LSData = JSON.parse(localStorage.getItem("newPage")) || DefaultData;
+    console.log(LSData);
+
+    function display(data) {
+
+        let product = document.createElement("div");
+
+        let img = document.createElement("img");
+        img.src = data.img;
+
+        let name = document.createElement("h3");
+        name.innerText = data.name;
+
+        let price = document.createElement("p");
+        price.innerText = "$" + data.price;
+
+        let brand = document.createElement("p");
+        brand.innerText = "Brand:-" + data.brand;
+
+        let size = document.createElement("h2");
+        size.innerText = "Size:-" + data.size;
+
+        let catagory = document.createElement("p");
+        catagory.innerText = "Catagory:-" + data.catagory;
+
+        product.append(img, name, price, brand, size, catagory);
+        document.body.append(product);
+
+    }
+    display(LSData)
+
+
+
+
+
+</script>
+
+</html>

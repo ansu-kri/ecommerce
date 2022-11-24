@@ -52,3 +52,121 @@ leftbtn.addEventListener("click",function(){
     }
     crauser.src=imagesLink[imageState];
 })
+////////
+
+let productData=[
+    {
+        brand: "Puma",
+        name: "chil pill supersoft palysuit",
+        price: "799",
+        size: "M,L,XX,XXS",
+        productID: "women3",
+        catagory: "party",
+        img: "https://m.media-amazon.com/images/G/31/img2020/fashion/WA_2020/BAY2022/SBO-QC3_02._SS680_QL85_.jpg",
+      },
+      {
+        brand: "Gap",
+        name: "plus size womens",
+        price: "2000",
+        size: "X,M,L,XXS,XXL",
+        productID: "women4",
+        catagory: "formal",
+        img: "https://m.media-amazon.com/images/G/31/img2020/fashion/WA_2020/BAY2022/SBO-QC3_04._SS680_QL85_.jpg",
+      },
+      {
+        brand: "Bady Moo",
+        name: "balck bella",
+        price: "1347",
+        size: "X,M,L",
+        productID: "women5",
+        catagory: "workout",
+        img: "https://m.media-amazon.com/images/I/81djib74cOL._AC_UL480_FMwebp_QL65_.jpg",
+      },
+      {
+        brand: "Pepe jeans",
+        name: "plus size womens",
+        price: "979",
+        size: "XXS,M,L",
+        productID: "women6",
+        catagory: "travel",
+        img: "https://m.media-amazon.com/images/I/61TfLOUZQ-L._AC_UL480_FMwebp_QL65_.jpg",
+      },
+      {
+        brand: "Puma",
+        name: "chil pill supersoft palysuit",
+        price: "2000",
+        size: "XXL,M,L",
+        productID: "women7",
+        catagory: "sports",
+        img: "https://m.media-amazon.com/images/I/41TpiwGOWoS._AC_UL480_FMwebp_QL65_.jpg",
+      },
+      {
+        brand: "Gap",
+        name: "chil pill supersoft palysuit",
+        price: "1347",
+        size: "X,M,L,XX",
+        productID: "women8",
+        catagory: "Casual",
+        img: "https://m.media-amazon.com/images/G/31/img2020/fashion/WA_2020/BAY2022/SBO-QC3_01._SS680_QL85_.jpg",
+      }
+    ]
+
+    let container=document.getElementById("container");
+    let cart=document.querySelector("#cart");
+    let cartLS=JSON.parse(localStorage.getItem("cart-page"))||[]
+
+    function display(data){
+        container.innerHTML=null;
+    data.forEach(function(ele){
+        let product=document.createElement("div");
+        let img=document.createElement("img")
+        img.src=ele.img;
+        let name=document.createElement("h3");
+        name.innerText=ele.name;
+        let price=document.createElement("p");
+        price.innerText="$"+ele.price;
+        let brand=document.createElement("p");
+        brand.innerText=ele.brand;
+
+        let size=document.createElement("h2");
+        size.innerText=ele.size;
+
+        let catagory=document.createElement("p");
+        catagory.innerText=ele.catagory;
+
+        let cart=document.createElement("button");
+        cart.innerText="View";
+        cart.addEventListener("click",function(){
+            AddToCart(ele);
+        })
+        
+        product.append(img,name,price,brand,size,catagory,cart);
+
+        product.addEventListener("click",function(){
+            newPage(ele);
+        })
+
+        container.append(product);
+
+    })
+}
+display(productData)
+
+function newPage(ele){
+    localStorage.setItem("newPage",JSON.stringify(ele))
+    window.location.href="allData.html"
+}
+
+search.addEventListener("input", function () {
+    if (search.value === null || search.value === "") {
+        display(productData)
+    } else {
+       let  productData2 = productData.filter(function (ele) {
+        return ele.brand
+          .toLocaleLowerCase()
+          .includes(search.value.toLocaleLowerCase());
+      });
+      display(productData2);
+    }
+  });
+    

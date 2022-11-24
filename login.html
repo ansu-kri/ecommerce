@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./login.css">
+</head>
+
+<body>
+    <div id="box">
+        <form id="form">
+            <h2>LOGIN to your Account</h2>
+            <label for="">Email</label><br />
+            <input placeholder="Enter your mail" id="email" type="email">
+            <label for="">Password</label><br />
+            <input placeholder="Enter your password" id="password" type="password">
+            <input type="submit" value="Login">
+        </form>
+    </div>
+</body>
+<script>
+    let signupLS = JSON.parse(localStorage.getItem("signup")) || [];
+    let form = document.querySelector("form");
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        if (signupLS.length == 0) {
+            alert("No User Exist");
+            return;
+        }
+        let obj = {
+            email: form.email.value,
+            password: form.password.value,
+        }
+        let flag = false;
+        signupLS.forEach(function (ele) {
+            if (ele.email === obj.email && ele.password == obj.password) {
+                flag = true;
+                localStorage.setItem("signin", JSON.stringify(ele));
+                alert("login sucessfully")
+                window, location.href = "index.html";
+            }
+        })
+        if (flag == false) {
+            alert("User doesnot Exist");
+        }
+
+    })
+</script>
+
+</html>

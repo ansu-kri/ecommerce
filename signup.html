@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up page</title>
+    <link rel="stylesheet" href="./signup.css">
+</head>
+
+<body>
+    <div id="box">
+        <h2>Sign Up</h2>
+        <form id="form">
+            <input class="in" id="name" type="Name" placeholder="Full Name*" />
+            <input class="in" id="email" type="email" placeholder="Email Address*" />
+            <input class="in" id="password" type="password" placeholder="create password*" />
+            <div id="check">
+                <input type="checkbox">
+                <label for="">Remember Me</label>
+            </div>
+            <input type="submit" value="CREATE AN ACCOUNT" id="sub">
+            <p>By clicking "Create an Account", you agree to our Terms of Use and Privacy Policy, including the Use of
+                Cookies and the transfer of your personal information to the United States, a jurisdiction that may not
+                provide an equivalent level of data protection to the laws in your home country</p>
+        </form>
+        <div id="bottom">
+            <p>Already have an account? <a href="login.html">Sign In</a></p>
+        </div>
+    </div>
+</body>
+<script>
+    let form = document.querySelector("form");
+    let signupLS = JSON.parse(localStorage.getItem("signup")) || [];
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        let obj = {
+            name: form.name.value,
+            email: form.email.value,
+            password: form.password.value,
+        }
+        if (obj.name == "" || obj.email == "" || obj.password == "") {
+            alert("Please fill entire data");
+            return;
+        }
+        //console.log(obj);
+        signupLS.push(obj);
+        localStorage.setItem("signup", JSON.stringify(signupLS));
+        alert("signup sucessfully");
+        window, location.href = "login.html";
+    })
+</script>
+
+</html>
