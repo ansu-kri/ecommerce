@@ -258,12 +258,13 @@ function display(data) {
         catagory.innerText = ele.catagory;
 
         let cart = document.createElement("button");
+        cart.setAttribute("id","cartbtn")
         cart.innerText = "Add To Cart";
         cart.addEventListener("click", function () {
             AddToCart(ele);
         })
 
-        product.append(img, name, price, brand, size, catagory, cart);
+        product.append(img, name, price, size, catagory, cart);
 
         container1.append(product);
     });

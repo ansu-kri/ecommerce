@@ -67,6 +67,10 @@ body{
     font-size: 30px;
     color: rgb(129, 81, 169);
 }
+#slider #close{
+    width: 20px;
+    height: 20px;
+}
 
 
 #close>img {
@@ -196,7 +200,7 @@ cursor: pointer;
     box-shadow: rgba(5, 5, 5, 0.16) 0px 1px 4px;
     border-radius: 10px;
   }
-  button{
+  #cartbtn{
     cursor: pointer;
     /* display: grid; */
     margin: auto;
@@ -371,39 +375,5 @@ cursor: pointer;
         display: block;
     }
     
-    #container1 {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        text-align: center;
-        margin: auto;
-        margin-top: 20px;
-        gap: 10px;
-    }
-
-    #container1>div {
-        margin: auto;
-        width: 90%;
-        height: 530px;
-        /* padding: 20px; */
-        box-shadow: rgba(5, 5, 5, 0.16) 0px 1px 4px;
-    }
-
-    #container1>div>img {
-        width: 100%;
-        height: 350px;
-    }
-
-    #container1>div>button:hover {
-        font-size: 16px;
-        color: white;
-        background-color: black;
-
-    }
-
-    #s {
-        margin-top: 100px;
-        width: 20%;
-        height: 30px;
-        /* border: 1px solid red; */
-    }
+   
   }

@@ -135,6 +135,7 @@ let productData=[
         catagory.innerText=ele.catagory;
 
         let cart=document.createElement("button");
+        cart.setAttribute("id","cartbtn")
         cart.innerText="View";
         cart.addEventListener("click",function(){
             AddToCart(ele);

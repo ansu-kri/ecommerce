@@ -1,11 +1,18 @@
-* {
-    background-color: aliceblue;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #D9AFD9;
+    
 }
 #box {
     width: 30%;
+    height: 500px;
     border: 1px solid white;
     margin: auto;
-    margin-top: 40px;
+    margin-top: 80px;
     background-color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -69,6 +76,12 @@ a {
 
 .in {
     background-color: white;
+}
+input[type=submit]{
+    width: 100%;
+    margin-top: 30px;
+    font-size: 20px;
+    cursor: pointer;
 }
 input[type=submit]:hover{
     background-color: rgb(201, 120, 133);
